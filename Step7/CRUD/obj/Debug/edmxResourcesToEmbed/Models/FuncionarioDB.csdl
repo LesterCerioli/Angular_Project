@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="COADCORPModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Funcionario">
+    <Key>
+      <PropertyRef Name="funcionarioid" />
+    </Key>
+    <Property Name="funcionarioid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nome" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="departamento" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="COADCORPEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Funcionarios" EntityType="Self.Funcionario" />
+  </EntityContainer>
+</Schema>

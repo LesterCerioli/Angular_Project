@@ -1,0 +1,34 @@
+﻿<div class="container" ng-controller="funcionarioCtrl">
+    <div class="panel panel-info">
+        <div class="panel-heading">Listagem de Funcionários - Tutorial de CRUD</div>
+        <table class="table table-bordered">
+            <thead style="background-color: burlywood">
+            <tr>
+                <th>Id Funcionário</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th></th>>Departamento</th>
+                <th>Cargo</th>
+                <th>Ação </th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td ng-repeat="func in Funcionarios">
+                    <td>{{func.FuncionarioId}}</td>
+                    <td>{{func.Nome}}</td>
+                    <td>{{func.Email}}</td>
+                    <td>{{func.Departamento}}</td>
+                    <td>{{func.Cargo}}</td>
+                    <td style="width: 200px">
+                        <a href="#" class="btn btn-info">Atualizar</a>
+                        <a href="#" class="btn btn-danger">Excluir</a>
+
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div> 
+
+</div>
